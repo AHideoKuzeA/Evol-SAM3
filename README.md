@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="main-1.jpg" alt="Fig. 3: SAARN overall framework" width="70%"><br>
+  <img src="/pic/pipline.jpg" alt="Fig. 3: SAARN overall framework" width="70%"><br>
 </p>
 
 
