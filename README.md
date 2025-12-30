@@ -4,7 +4,7 @@
 </p>
 
 
-<h1 align="center">RIS-LAD: Referring Low-Altitude Drone Image Segmentation</h1>
+<h1 align="center">Evolving, Not Training: Zero-Shot Reasoning Segmentation via Evolutionary Prompting</h1>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2507.20920">
