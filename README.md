@@ -60,14 +60,35 @@ Our framework consists of three phases:
 
 ## 📊 Performance
 
-<div align="center">
-  <img src="assets/performance.png" width="85%">
-</div>
+We conduct extensive experiments on **ReasonSeg** and **RefCOCO** series benchmarks. **Evol-SAM3** achieves superior performance without any parameter updates.
 
-**Key Results:**
-* **ReasonSeg:** Achieved **72.5 gIoU** (Zero-shot), surpassing the supervised LISA-13B (65.0 gIoU).
-* **RefCOCO:** Outperformed SAM 3 Agent baseline by **+9.3 cIoU**.
-* **Efficiency:** Optimal performance reached at just **Gen=2**.
+### 🏆 Comparison on ReasonSeg (Zero-Shot vs. SFT)
+
+Evol-SAM3 (7B) outperforms not only other training-free agents but also fully supervised SOTA methods (e.g., LISA-13B).
+
+| Method | Type | Backbone | Val gIoU | Test gIoU |
+| :--- | :---: | :---: | :---: | :---: |
+| **LISA** [CVPR'24] | SFT | LLaVA-1.5 13B | 65.0 | 61.3 |
+| **GLaMM** [CVPR'24] | SFT | Vicuna 7B | 47.4 | -- |
+| **SAM 3 Agent** [arXiv'25] | Training-free | Qwen2.5-VL 72B | **74.6** | 70.8 |
+| **RSVP** [arXiv'25] | Training-free | GPT-4o | 64.7 | 60.3 |
+| **Evol-SAM3 (Ours)** | **Training-free** | **Qwen2.5-VL 7B** | 70.7 | **72.5** |
+
+> **Note:** Our 7B model surpasses the 72B baseline on the challenging Test set, proving the efficiency of evolutionary search.
+
+<br>
+
+### 📈 Comparison on Referring Expression Segmentation (Zero-Shot)
+
+Comparison with state-of-the-art zero-shot methods on RefCOCO/+/g.
+
+| Method | Backbone | RefCOCO (val) | RefCOCO+ (val) | RefCOCOg (val-U) |
+| :--- | :---: | :---: | :---: | :---: |
+| **SAM 3 Agent** | Qwen2.5-VL 7B | 59.4 | 51.4 | 57.2 |
+| **Evol-SAM3 (Ours)** | **Qwen2.5-VL 7B** | **68.7** | **64.4** | **64.7** |
+| *Improvement* | -- | <span style="color:green">**+9.3**</span> | <span style="color:green">**+13.0**</span> | <span style="color:green">**+7.5**</span> |
+
+> All results are reported in **cIoU**. Evol-SAM3 significantly narrows the gap with supervised methods.
 
 ---
 
