@@ -48,7 +48,7 @@ Evol-SAM3 significantly outperforms static baselines (e.g., SAM3 Agent) and even
 ## 🛠️ Methodology
 
 <div align="center">
-  <img src="pic/pipeline.jpg" width="95%">
+  <img src="pic/pipline.jpg" width="95%">
 </div>
 
 Our framework consists of three phases:
