@@ -14,7 +14,7 @@
 
 <br>
 
-<img src="pic/first2-1.jpg" width="80%">
+<img src="pic/first2-1.jpg" width="40%">
 
 <p align="center">
   <strong>Evol-SAM3 reformulates reasoning segmentation as an inference-time evolutionary search.</strong><br>
