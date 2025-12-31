@@ -14,7 +14,7 @@
 
 <br>
 
-<img src="assets/teaser.png" width="80%">
+<img src="pic/first2-1.jpg" width="80%">
 
 <p align="center">
   <strong>Evol-SAM3 reformulates reasoning segmentation as an inference-time evolutionary search.</strong><br>
@@ -48,7 +48,7 @@ Evol-SAM3 significantly outperforms static baselines (e.g., SAM3 Agent) and even
 ## 🛠️ Methodology
 
 <div align="center">
-  <img src="assets/pipeline.png" width="95%">
+  <img src="pic/pipeline.jpg" width="95%">
 </div>
 
 Our framework consists of three phases:
@@ -74,7 +74,7 @@ Our framework consists of three phases:
 ## 🖼️ Qualitative Results
 
 <div align="center">
-  <img src="assets/qualitative.png" width="95%">
+  <img src="pic/visual-1.jpg" width="95%">
 </div>
 
 Comparison between **SAM3 Agent** (Baseline) and **Evol-SAM3** (Ours). Our method successfully handles functional descriptions and corrects visual biases.
