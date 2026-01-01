@@ -104,7 +104,85 @@ Comparison between **SAM3 Agent** (Baseline) and **Evol-SAM3** (Ours). Our metho
 
 ## 🚀 Quick Start
 
-(Coming Soon)
+### 1. Environment Setup
+
+Create and activate the conda environment:
+
+```bash
+conda env create -f Evol-SAM3.yml
+conda activate Evol-SAM3
+```
+
+### 2. Data Preparation
+
+Organize your datasets in the `DATASET` directory as follows:
+
+```
+DATASET/
+├── reason_seg/
+│   └── ReasonSeg/
+│       ├── train/
+│       ├── val/
+│       └── test/
+└── refer_seg/
+    ├── images/
+    │   └── train2014/
+    ├── refcoco/
+    ├── refcoco+/
+    └── refcocog/
+```
+
+### 3. Model Weights
+
+Download the required model weights:
+
+- **SAM3 Checkpoint**: Download `sam3.pt` from [Hugging Face](https://huggingface.co/facebook/sam3) (requires access request).
+- **MLLM Checkpoint**: 
+The `MLLM` directory structure should look like this:
+```
+MLLM/
+└── Qwen2.5_VL_7B/
+    └── Qwen/
+        └── Qwen2___5-VL-7B-Instruct/
+            ├── config.json
+            ├── model.safetensors
+            ├── tokenizer.json
+            └── ...
+```
+Download [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) .
+
+### 4. Configuration
+
+Update the configuration file `configs/ReasonSeg_7B.yaml` to point to the correct paths:
+
+```yaml
+paths:
+  qwen_model_path: "MLLM/Qwen2.5_VL_7B/Qwen/Qwen2___5-VL-7B-Instruct"
+  sam3_ckpt_path: "sam3/sam3.pt"
+  dataset_root: "DATASET/reason_seg/ReasonSeg"
+  log_dir: "logs/ReasonSeg_7B"
+```
+
+### 5. Inference
+
+Run the inference script:
+
+```bash
+bash ReasonSeg_7B.sh
+```
+
+This script will execute:
+```bash
+python main.py --config configs/ReasonSeg_7B.yaml
+```
+
+Resume Inference:
+If the inference is interrupted, you can resume it by specifying the log directory with the `--resume` argument:
+
+```bash
+python main.py --config configs/ReasonSeg_7B.yaml --resume logs/ReasonSeg_7B/ReasonSeg_7B_xxxxx
+```
+*(Replace `ReasonSeg_7B_xxxxx` with your actual log directory name)*
 
 ## 💻 Usage
 
