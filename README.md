@@ -115,6 +115,10 @@ conda activate Evol-SAM3
 
 ### 2. Data Preparation
 
+**Download Datasets:**
+- For dataset, you can download it from [here](https://github.com/dvlab-research/LISA#dataset).
+
+
 Organize your datasets in the `DATASET` directory as follows:
 
 ```
@@ -141,6 +145,7 @@ Download the required model weights:
 The `MLLM` directory structure should look like this:
 ```
 MLLM/
+├── Qwen2.5_VL_3B/
 └── Qwen2.5_VL_7B/
     └── Qwen/
         └── Qwen2___5-VL-7B-Instruct/
