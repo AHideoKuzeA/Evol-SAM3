@@ -1,0 +1,25 @@
+system:
+  gpu_ids: "0,1,2,3"
+
+paths:
+  qwen_model_path: "MLLM/Qwen2.5_VL_7B/Qwen/Qwen2___5-VL-7B-Instruct" 
+  sam3_ckpt_path: "sam3/sam3.pt"
+  dataset_root: "DATASET/reason_seg/ReasonSeg"
+  log_dir: "logs/ReasonSeg_7B"
+
+dataset:
+  split: "test"
+
+debug:
+  mode: True
+
+evolution:
+  n_pop: 4
+  max_generations: 2
+  r_init: 0.0
+  pei_update_w: 1.0
+  theta_pei: 3.0
+  theta_iou: 0.95
+  theta_arena_skip: 0.85
+  max_arena_fights: 2
+  sam_conf_threshold: 0.6

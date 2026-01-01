@@ -1,0 +1,14 @@
+logs          # 日志目录
+DATASET
+MLLM
+.env           # 环境变量文件
+*.log          # 所有.log后缀文件
+.DS_Store      # 系统隐藏文件
+logs
+*.pyc
+bad_cases_analysis_iou50_with_gt
+debug_pipeline_results
+__pycache__
+gt_masks_visualization
+vis_output
+sam3/sam3.pt
