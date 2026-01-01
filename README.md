@@ -8,7 +8,7 @@
 
 <sup>1</sup>Xiamen University, <sup>2</sup>National University of Singapore
 
-<a href="https://arxiv.org/abs/xxxx.xxxxx"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg"></a>
+<a href="https://arxiv.org/abs/2512.24702"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg"></a>
 <a href="https://github.com/yourusername/Evol-SAM3/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"></a>
 <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-%3E=1.12-ee4c2c.svg"></a>
 
@@ -196,9 +196,12 @@ python main.py --config configs/ReasonSeg_7B.yaml --resume logs/ReasonSeg_7B/Rea
 If you find our work helpful, please consider citing:
 
 ```bibtex
-@article{ye2025evolsam3,
-  title={Evolving, Not Training: Zero-Shot Reasoning Segmentation via Evolutionary Prompting},
-  author={Ye, Kai and You, Xiaotong and Lin, Jianghang and Ji, Jiayi and Dai, Pingyang and Cao, Liujuan},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2025}
+@misc{ye2025evolvingtrainingzeroshotreasoning,
+      title={Evolving, Not Training: Zero-Shot Reasoning Segmentation via Evolutionary Prompting}, 
+      author={Kai Ye and Xiaotong You and Jianghang Lin and Jiayi Ji and Pingyang Dai and Liujuan Cao},
+      year={2025},
+      eprint={2512.24702},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.24702}, 
 }
