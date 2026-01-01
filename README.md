@@ -184,11 +184,7 @@ python main.py --config configs/ReasonSeg_7B.yaml --resume logs/ReasonSeg_7B/Rea
 ```
 *(Replace `ReasonSeg_7B_xxxxx` with your actual log directory name)*
 
-## 💻 Usage
 
-(Coming Soon)
-
----
 
 ## 📝 Citation
 
